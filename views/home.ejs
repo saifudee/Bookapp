@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <%- include("partial/header"); %>
+  <h1>Home</h1>
+  <p><%=homepage1 %></p>
+  <% post1.forEach(function(post1){ %>
+  <h3><%=post1.Title %></h3>
+    <p><%=post1.Content.substring(0,120)%><a href="/post/<%=post1.Title%>">ReadMore</a></p>
+  <%});%>
+  <%- include("partial/footer");%>
+</body>
+</html>
